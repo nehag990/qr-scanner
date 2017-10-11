@@ -6,7 +6,7 @@
 
 ### [Live](https://cdn.rawgit.com/nehag990/qr-scanner/gh-pages/index.html)
 
-## Technologies
+## Tech
   
   - Create QR Codes via [Google Sheets](https://chrome.google.com/webstore/detail/qr-code-generator/lofihghpipjlmpcnigcopahlpaopcoaa?hl=en-US)
     
