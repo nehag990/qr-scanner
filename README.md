@@ -16,7 +16,7 @@
   
   - [IFTTT](https://ifttt.com/applets/328574p-qr-code-scan-to-vote) (If This Then That) sets up the google sheets endpoint
   
-  - Google Drive [Attendance Data](https://drive.google.com/open?id=1LcSxuYBTEzJvbU62wnTgjEjpuNP7bVLjjaXk6wR-eCY)
+  - Google Sheets to centralize the [Attendance Data](https://drive.google.com/open?id=1LcSxuYBTEzJvbU62wnTgjEjpuNP7bVLjjaXk6wR-eCY)
 
 ## Features
 
