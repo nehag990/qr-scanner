@@ -1,6 +1,6 @@
 ### ![alt text](Logo.png)
 
-# [Tech:IRL QR Code Scanner](https://qrcodescan.in)
+# QR Code Scanner
 
 *QRCode Scanner - scan QR codes and store them in a central google sheets repository*
 
