@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production') {
 
 window.addEventListener("DOMContentLoaded", () => {
   //To check the device and add iOS support
-  window.iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+  //window.iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
 
   var copiedText = null;
   var frame = null;
