@@ -99,10 +99,10 @@ window.addEventListener("DOMContentLoaded", () => {
     //window.location = sheetsURL;
     textBoxEle.value = "";
     sheetsURL = "";
-    // if (window.iOS) {
-    //   frame.src = "";
-    //   frame.className = "";
-    // }
+    if (window.iOS) {
+      frame.src = "";
+      frame.className = "";
+    }
 
     dialogElement.classList.add('app__dialog--hide');
     dialogOverlayElement.classList.add('app__dialog--hide');
@@ -110,7 +110,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // For iOS support
-  // if (window.iOS) selectFromPhoto();
+  if (window.iOS) selectFromPhoto();
 
   function selectFromPhoto() {
     if (videoElement) videoElement.remove(); //removing the video element
