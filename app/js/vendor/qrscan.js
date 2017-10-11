@@ -19,7 +19,7 @@ QRReader.init = () => {
 
 	// Init Webcam + Canvas
 	//!window.iOS
-	if (1) {
+	if (!window.iOS) {
 		QRReader.webcam = document.querySelector("video");
 	}
 	else {
