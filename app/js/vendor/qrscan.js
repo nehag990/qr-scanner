@@ -18,7 +18,8 @@ QRReader.init = () => {
 	var streaming = false;
 
 	// Init Webcam + Canvas
-	if (!window.iOS) {
+	//!window.iOS
+	if (1) {
 		QRReader.webcam = document.querySelector("video");
 	}
 	else {
@@ -28,7 +29,7 @@ QRReader.init = () => {
 	QRReader.setCanvas();
 	QRReader.decoder = new Worker(baseurl + "decoder.min.js");
 
-	if (!window.iOS) {
+	if (1) {
 		// Resize webcam according to input
 		QRReader.webcam.addEventListener("play", function (ev) {
 			if (!streaming) {
@@ -57,7 +58,7 @@ QRReader.init = () => {
 			});
 	}
 
-	if (!window.iOS) {
+	if (1) {
 		navigator.mediaDevices.enumerateDevices()
 			.then(function (devices) {
 				var device = devices.filter(function(device) {

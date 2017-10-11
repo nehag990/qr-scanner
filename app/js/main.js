@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // Set camera overlay size
     setTimeout(() => {
       setCameraOverlay();
-      if (!window.iOS) {
+      if (1) {
         scan();
       }
     }, 1000);
@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //Scan
   function scan() {
-    if (!window.iOS) scanningEle.style.display = 'block';
+    if (1) scanningEle.style.display = 'block';
     QRReader.scan((result) => {
       copiedText = result;
       sheetsURL = 'https://maker.ifttt.com/trigger/conf/with/key/bTiXpE3XeLKopMXqjIaaZK?value1=' + result.split(' ')[0] + '&value2=' + result.split(' ')[1];
@@ -99,10 +99,10 @@ window.addEventListener("DOMContentLoaded", () => {
     //window.location = sheetsURL;
     textBoxEle.value = "";
     sheetsURL = "";
-    if (window.iOS) {
-      frame.src = "";
-      frame.className = "";
-    }
+    // if (window.iOS) {
+    //   frame.src = "";
+    //   frame.className = "";
+    // }
 
     dialogElement.classList.add('app__dialog--hide');
     dialogOverlayElement.classList.add('app__dialog--hide');
@@ -110,7 +110,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // For iOS support
-  if (window.iOS) selectFromPhoto();
+  // if (window.iOS) selectFromPhoto();
 
   function selectFromPhoto() {
     if (videoElement) videoElement.remove(); //removing the video element
