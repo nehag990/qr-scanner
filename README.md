@@ -4,7 +4,7 @@
 
 *QRCode Scanner - scan QR codes and store them in a central google sheets repository*
 
-### [Live](https://cdn.rawgit.com/nehag990/qr-scanner/gh-pages/index.html)
+### [Live](https://rawgit.com/nehag990/qr-scanner/gh-pages/index.html)
 
 ## Tech
   
