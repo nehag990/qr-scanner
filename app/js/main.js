@@ -35,6 +35,9 @@ window.addEventListener("DOMContentLoaded", () => {
   var infoSvg = document.querySelector('.app__header-icon svg');
   var videoElement = document.querySelector('video');
   var sheetsURL = null;
+  var type = null;
+  var workshopBtnElement = document.querySelector('.workshop');
+  var sessionBtnElement = document.querySelector('.session');
   window.appOverlay = document.querySelector('.app__overlay');
 
   //Initializing qr scanner
@@ -64,6 +67,15 @@ window.addEventListener("DOMContentLoaded", () => {
   dialogCloseBtnElement.addEventListener('click', hideDialog, false);
   dialogOpenBtnElement.addEventListener('click', openInBrowser, false);
 
+  //Button click for Session and Workshop
+  workshopBtnElement.addEventListener('click', workshop, false);
+  sessionBtnElement.addEventListener('click', session, false);
+
+  function workshop() {
+    workshopBtnElement.style.background='red';
+    type = 'Workshop';
+  }
+
   //To open result in browser
   function openInBrowser() {
     console.log('Result: ', copiedText);
@@ -76,8 +88,17 @@ window.addEventListener("DOMContentLoaded", () => {
   function scan() {
     if (1) scanningEle.style.display = 'block';
     QRReader.scan((result) => {
+      var array = [];
+      var first, last;
       copiedText = result;
-      sheetsURL = 'https://maker.ifttt.com/trigger/conf/with/key/bTiXpE3XeLKopMXqjIaaZK?value1=' + result.split(' ')[0] + '&value2=' + result.split(' ')[1];
+      array = result.split(', ')
+      last = array[0]
+      if (array.length == 2)
+        first = array[1]
+      else
+        first = array[2]
+
+      sheetsURL = 'https://maker.ifttt.com/trigger/conf/with/key/bTiXpE3XeLKopMXqjIaaZK?value1=' + last + '&value2=' + first;
       textBoxEle.value = result;
       textBoxEle.select();
       scanningEle.style.display = 'none';
@@ -99,6 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //window.location = sheetsURL;
     textBoxEle.value = "";
     sheetsURL = "";
+    type = "";
     if (window.iOS) {
       frame.src = "";
       frame.className = "";

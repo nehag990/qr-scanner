@@ -379,3 +379,25 @@ video {
   opacity: 0.9;
   transform: scale(0.98);
 }
+
+.btn {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.workshop {
+  left: 123px;
+  background-color: purple;
+}
+
+.session {
+  background-color: deepskyblue;
+}
