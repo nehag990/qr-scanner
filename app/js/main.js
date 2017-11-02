@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
       var array = [];
       var first, last;
       copiedText = result;
-      array = result.split(', ')
+      array = result.split(/(?:,| )+/)
       last = array[0]
       if (array.length == 2)
         first = array[1]
